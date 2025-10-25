@@ -163,7 +163,7 @@ function redirectToMain() {
     
     // 500ms sonra yönlendir
     setTimeout(() => {
-        window.location.href = 'index.html';
+        window.location.href = 'home.html';
     }, 500);
 }
 
@@ -172,7 +172,7 @@ window.addEventListener('error', function(e) {
     console.error('Splash screen error:', e.error);
     // Hata durumunda direkt yönlendir
     setTimeout(() => {
-        window.location.href = 'splash.html';
+        window.location.href = 'home.html';
     }, 2000);
 });
 
