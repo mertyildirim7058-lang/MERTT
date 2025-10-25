@@ -1,0 +1,352 @@
+/* splash.css - Splash Screen Stilleri */
+:root {
+    --primary-gold: #D4AF37;
+    --secondary-gold: #FFD700;
+    --dark-charcoal: #1A1A1A;
+    --light-ivory: #F8F4E9;
+    --deep-navy: #0A1931;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, var(--deep-navy) 0%, var(--dark-charcoal) 50%, var(--deep-navy) 100%);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#backgroundCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.splash-container {
+    text-align: center;
+    color: var(--light-ivory);
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.splash-content {
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Logo Emblem Stilleri */
+.logo-emblem {
+    margin-bottom: 40px;
+}
+
+.emblem-circle {
+    width: 180px;
+    height: 180px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+}
+
+.rotating-ring {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid transparent;
+    border-top: 2px solid var(--primary-gold);
+    border-right: 2px solid transparent;
+    border-radius: 50%;
+    animation: rotate 3s linear infinite;
+}
+
+.rotating-ring.reverse {
+    width: 160px;
+    height: 160px;
+    border-top: 2px solid var(--secondary-gold);
+    animation: rotateReverse 2s linear infinite;
+}
+
+.rotating-ring::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-gold);
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.pulsing-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--secondary-gold);
+    border-radius: 50%;
+    animation: pulseGlow 2s ease-in-out infinite;
+    box-shadow: 0 0 20px var(--secondary-gold);
+}
+
+.logo-initial {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--primary-gold);
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    animation: breathe 3s ease-in-out infinite;
+    width: 10px;
+    height: 5px;
+    margin-right: 250px;
+    padding-bottom: 250px;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, var(--primary-gold), var(--secondary-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: slideUp 1.2s ease-out 0.8s both;
+    letter-spacing: 2px;
+}
+
+.brand-tagline {
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+    opacity: 0.9;
+    color: var(--light-ivory);
+    animation: slideUp 1.2s ease-out 1.1s both;
+    letter-spacing: 1px;
+}
+
+/* Loading Container */
+.loading-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.loading-text {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--primary-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.loading-dots {
+    display: flex;
+    gap: 2px;
+}
+
+.dot {
+    opacity: 0;
+    animation: dotPulse 1.5s infinite;
+}
+
+.dot:nth-child(1) { animation-delay: 0s; }
+.dot:nth-child(2) { animation-delay: 0.3s; }
+.dot:nth-child(3) { animation-delay: 0.6s; }
+
+.loading-bar {
+    width: 100%;
+    height: 3px;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 2px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    position: relative;
+    animation: slideUp 1.2s ease-out 1.4s both;
+}
+
+.loading-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+.loading-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-gold), var(--secondary-gold));
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.loading-percentage {
+    font-size: 1rem;
+    color: var(--primary-gold);
+    font-weight: 600;
+    animation: slideUp 1.2s ease-out 1.6s both;
+}
+
+/* Security Badge */
+.security-badge {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-gold);
+    font-size: 0.9rem;
+    animation: fadeIn 2s ease-out 2s both;
+}
+
+.security-badge i {
+    font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes rotateReverse {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 0 20px var(--secondary-gold);
+    }
+    50% { 
+        transform: scale(1.2);
+        box-shadow: 0 0 30px var(--secondary-gold), 0 0 40px rgba(255, 215, 0, 0.3);
+    }
+}
+
+@keyframes breathe {
+    0%, 100% { 
+        transform: scale(1);
+        text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    }
+    50% { 
+        transform: scale(1.05);
+        text-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes dotPulse {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .emblem-circle {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .rotating-ring {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .rotating-ring.reverse {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .logo-initial {
+        font-size: 3.5rem;
+    }
+    
+    .brand-name {
+        font-size: 3rem;
+    }
+    
+    .brand-tagline {
+        font-size: 1.1rem;
+    }
+    
+    .loading-container {
+        max-width: 300px;
+    }
+    
+    .security-badge {
+        bottom: 20px;
+        right: 20px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .emblem-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .rotating-ring {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .rotating-ring.reverse {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .logo-initial {
+        font-size: 3rem;
+    }
+    
+    .brand-name {
+        font-size: 2.5rem;
+    }
+    
+    .brand-tagline {
+        font-size: 1rem;
+    }
+}

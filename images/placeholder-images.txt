@@ -1,0 +1,25 @@
+placeholder-images.txt - Gerekli Görseller
+
+1. logo.png (200x60 piksel)
+   - Şeffaf arka planlı Mertt logosu
+   - Altın rengi ve lüks font
+
+2. favicon.ico (32x32 piksel)
+   - M harfi içeren favicon
+   - Altın rengi tema
+
+3. hero-bg.jpg (1920x1080 piksel)
+   - Lüks, minimalist arka plan
+   - Koyu tonlar ve altın detaylar
+
+4. about.jpg (800x600 piksel)
+   - Mağaza veya ürün görseli
+   - Profesyonel çekim
+
+5. products/
+   - product1.jpg (400x400 piksel) - Premium Seri
+   - product2.jpg (400x400 piksel) - Klasik Seri  
+   - product3.jpg (400x400 piksel) - Modern Seri
+
+Not: Bu görselleri kendi marka görsellerinizle değiştirin.
+Geçici olarak CSS'de placeholder'lar kullanılmıştır.

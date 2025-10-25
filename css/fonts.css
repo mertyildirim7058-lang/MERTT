@@ -1,0 +1,53 @@
+/* fonts.css - Yazı Tipi Tanımlamaları */
+/* Playfair Display - Google Fonts üzerinden yüklenecek */
+/* Montserrat - Google Fonts üzerinden yüklenecek */
+
+/* Font sınıfları */
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Font ağırlıkları */
+.text-light {
+    font-weight: 300;
+}
+
+.text-regular {
+    font-weight: 400;
+}
+
+.text-semibold {
+    font-weight: 600;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+/* Font stilleri */
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+    .responsive-text {
+        font-size: calc(1rem + 0.5vw);
+    }
+}
