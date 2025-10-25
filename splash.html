@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERTT | Yükleniyor</title>
+    <!-- Favicon ve Sekme İconları -->
+<link rel="icon" type="image/x-icon" href="images/MERTT.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+<!-- Apple Touch Icon (iOS) -->
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+<!-- Android/Chrome -->
+<link rel="icon" type="image/png" sizes="192x192" href="images/icon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="images/icon-512x512.png">
+
+<!-- Microsoft Tiles -->
+<meta name="msapplication-TileColor" content="#D4AF37">
+<meta name="msapplication-TileImage" content="images/icon-144x144.png">
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#D4AF37">
+<meta name="msapplication-navbutton-color" content="#D4AF37">
+<meta name="apple-mobile-web-app-status-bar-style" content="#D4AF37">
+    <link rel="stylesheet" href="css/splash.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="splash-container">
+        <canvas id="backgroundCanvas"></canvas>
+        <div class="splash-content">
+            <div class="logo-emblem">
+                <div class="emblem-circle">
+                    <div class="rotating-ring"></div>
+                    <div class="rotating-ring reverse"></div>
+                    <div class="pulsing-dot"></div>
+                    <div class="logo-initial"><img src="images/MERTT.ico"></div>
+                </div>
+            </div>
+            <h1 class="brand-name">MERTT</h1>
+            <p class="brand-tagline">GELECEK İÇİN BİLGİ VE TEKNOLOJİ</p>
+            <div class="loading-container">
+                <div class="loading-text">
+                    <span>Yükleniyor</span>
+                    <span class="loading-dots">
+                        <span class="dot">.</span>
+                        <span class="dot">.</span>
+                        <span class="dot">.</span>
+                    </span>
+                </div>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+                <div class="loading-percentage">0%</div>
+            </div>
+        </div>
+        <div class="security-badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>Güvenli Bağlantı</span>
+        </div>
+    </div>
+
+    <script src="js/splash.js"></script>
+</body>
+</html>
